@@ -1,0 +1,22 @@
+# Compiler files
+cache/
+out/
+# Ignore node_modules completely
+node_modules/
+
+# Ignore .env file
+.env
+lib/
+# Ignore VSCode settings (optional)
+.vscode/
+.osmimum/
+.vscode/
+!/broadcast
+/broadcast/*/31337/
+/broadcast/**/dry-run/
+
+# Docs
+docs/
+
+# Dotenv file
+.env
