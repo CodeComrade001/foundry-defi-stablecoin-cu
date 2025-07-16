@@ -9,7 +9,7 @@ node_modules/
 lib/
 # Ignore VSCode settings (optional)
 .vscode/
-.osmimum/
+.osmium/
 .vscode/
 !/broadcast
 /broadcast/*/31337/

@@ -4,7 +4,7 @@ pragma solidity ^0.8.19;
 import {MockV3Aggregator} from "../test/mock/MockV3Aggregator.sol";
 import {Script} from "forge-std/Script.sol";
 // import { ERC20 } from "../test/mocks/ERC20.sol";
-import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import { ERC20Mock } from "../test/mock/ERC20Mock.sol";
 
 contract HelperConfig is Script {
     NetworkConfig public activeNetworkConfig;
@@ -50,10 +50,10 @@ contract HelperConfig is Script {
 
         vm.startBroadcast();
         MockV3Aggregator ethUsdPriceFeed = new MockV3Aggregator(DECIMALS, ETH_USD_PRICE);
-        ERC20 wethMock = new ERC20("WETH", "WETH", msg.sender, 1000e8);
+        ERC20Mock wethMock = new ERC20Mock("WETH", "WETH", msg.sender, 1000e8);
 
         MockV3Aggregator btcUsdPriceFeed = new MockV3Aggregator(DECIMALS, BTC_USD_PRICE);
-        ERC20 wbtcMock = new ERC20("WBTC", "WBTC", msg.sender, 1000e8);
+        ERC20Mock wbtcMock = new ERC20Mock("WBTC", "WBTC", msg.sender, 1000e8);
         vm.stopBroadcast();
 
         anvilNetworkConfig = NetworkConfig({
