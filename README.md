@@ -1,13 +1,31 @@
-## Foundry
+# 🪙 Foundry DeFi Stablecoin CU
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+A smart contract system built to simulate the creation of a decentralized, exogenously collateralized stablecoin pegged to the US dollar. This system mimics protocols like MakerDAO's DAI but is designed to be minimal, governance-free, and purely algorithmic.
 
-Foundry consists of:
+## ⚙️ Technologies Used
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- Solidity (v0.8.18)
+- Chainlink Oracles
+- OpenZeppelin Contracts
+- Foundry (Forge)
+
+## 📌 Project Highlights
+
+- **Overcollateralized stablecoin model**
+- Supports multiple collateral types (e.g., WETH, WBTC)
+- Liquidation mechanics with incentives
+- Health factor checks to ensure solvency
+- Modular and minimalistic architecture
+- No governance, no fees
+
+## 🔍 Key Features
+
+- 📈 Chainlink price feeds for real-time collateral valuation
+- 💸 Minting and redeeming of stablecoins based on collateral
+- 🧮 Health factor enforcement to protect the protocol
+- 🛡️ Reentrancy protection via `ReentrancyGuard`
+- 🔁 Liquidation logic with bonuses for liquidators
+- 🧱 Internal accounting and collateral management
 
 ## Documentation
 
